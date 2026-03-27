@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+.container {
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+}
+
+header h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.arrow {
+  color: #ffa116;
+}
+
+.status-banner {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 14px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.status-banner.success {
+  background: #0d3b1e;
+  color: #4ade80;
+  border: 1px solid #166534;
+}
+
+.status-banner.error {
+  background: #3b0d0d;
+  color: #f87171;
+  border: 1px solid #7f1d1d;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-section {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #a0a0c0;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hint {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #6b6b8d;
+}
+
+.input-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+input[type='text'],
+input[type='password'] {
+  flex: 1;
+  padding: 10px 12px;
+  background: #16213e;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type='text']:focus,
+input[type='password']:focus {
+  border-color: #ffa116;
+}
+
+input[type='text'] {
+  margin-bottom: 12px;
+}
+
+.icon-btn {
+  background: #16213e;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  color: #a0a0c0;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.icon-btn:hover {
+  border-color: #ffa116;
+  color: #ffa116;
+}
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #ffa116;
+  color: #1a1a2e;
+}
+
+.btn-primary:hover {
+  background: #ffb340;
+}
+
+.btn-secondary {
+  background: #16213e;
+  color: #a0a0c0;
+  border: 1px solid #2a2a4a;
+}
+
+.btn-secondary:hover {
+  border-color: #ffa116;
+  color: #ffa116;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toggle-section {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #16213e;
+  border-radius: 8px;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #2a2a4a;
+  border-radius: 24px;
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: #ffa116;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.stats-section {
+  margin-bottom: 16px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background: #16213e;
+  border-radius: 8px;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffa116;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #a0a0c0;
+  margin-top: 4px;
+}
+
+footer {
+  text-align: center;
+  padding-top: 12px;
+  border-top: 1px solid #2a2a4a;
+}
+
+footer a {
+  color: #6b6b8d;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #ffa116;
+}

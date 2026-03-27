@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeetCode to GitHub Pusher</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="../../icons/icon48.png" alt="Logo" class="logo" />
+      <h1>LeetCode <span class="arrow">&rarr;</span> GitHub</h1>
+    </header>
+
+    <div id="status-banner" class="status-banner hidden">
+      <span id="status-text"></span>
+    </div>
+
+    <section class="form-section">
+      <label for="github-token">GitHub Personal Access Token</label>
+      <div class="input-row">
+        <input
+          type="password"
+          id="github-token"
+          placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+          spellcheck="false"
+        />
+        <button id="toggle-token" class="icon-btn" title="Toggle visibility">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </button>
+      </div>
+
+      <label for="github-repo">Repository <span class="hint">(owner/repo)</span></label>
+      <input
+        type="text"
+        id="github-repo"
+        placeholder="username/leetcode-solutions"
+        spellcheck="false"
+      />
+
+      <div class="btn-row">
+        <button id="validate-btn" class="btn btn-secondary">Validate</button>
+        <button id="save-btn" class="btn btn-primary">Save</button>
+      </div>
+    </section>
+
+    <section class="toggle-section">
+      <div class="toggle-row">
+        <span>Auto-push on accept</span>
+        <label class="switch">
+          <input type="checkbox" id="auto-push-toggle" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stat-card">
+        <span class="stat-number" id="push-count">0</span>
+        <span class="stat-label">Solutions Pushed</span>
+      </div>
+    </section>
+
+    <footer>
+      <a href="https://github.com/devendrajadhav2470/leetcode-to-github-code-pusher" target="_blank" rel="noopener">
+        View on GitHub
+      </a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
